@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "VaultKeep",
+    "slug": "vaultkeep",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F2140"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.vaultkeep.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "VaultKeep uses your camera to photograph receipts.",
+        "NSPhotoLibraryUsageDescription": "VaultKeep accesses your photo library to attach receipts to warranty items."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F2140"
+      },
+      "package": "com.vaultkeep.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#0DBFB0"
+        }
+      ],
+      "expo-sqlite"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}

@@ -1,51 +1,41 @@
 {
   "expo": {
-    "name": "VaultKeep",
-    "slug": "vaultkeep",
+    "name": "HOALog",
+    "slug": "hoalog",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0F2140"
+      "backgroundColor": "#F2F2F7"
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.vaultkeep.app",
+      "bundleIdentifier": "com.hoalog.app",
       "infoPlist": {
-        "NSCameraUsageDescription": "VaultKeep uses your camera to photograph receipts.",
-        "NSPhotoLibraryUsageDescription": "VaultKeep accesses your photo library to attach receipts to warranty items."
+        "NSCameraUsageDescription": "HOALog uses your camera to photograph incidents as evidence.",
+        "NSPhotoLibraryUsageDescription": "HOALog accesses your photo library to attach evidence photos.",
+        "NSLocationWhenInUseUsageDescription": "HOALog logs GPS coordinates to document exactly where each incident occurred."
       }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0F2140"
+        "backgroundColor": "#F2F2F7"
       },
-      "package": "com.vaultkeep.app",
+      "package": "com.hoalog.app",
       "permissions": [
-        "android.permission.CAMERA",
-        "android.permission.READ_EXTERNAL_STORAGE",
-        "android.permission.RECEIVE_BOOT_COMPLETED",
-        "android.permission.VIBRATE"
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
       ]
     },
     "plugins": [
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/notification-icon.png",
-          "color": "#0DBFB0"
-        }
-      ],
-      "expo-sqlite"
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "your-eas-project-id"
-      }
-    }
+      "expo-image-picker",
+      "expo-location"
+    ]
   }
 }
